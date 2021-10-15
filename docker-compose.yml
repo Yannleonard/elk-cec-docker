@@ -5,7 +5,7 @@ services:
     build:
       context: elasticsearch/
       args:
-        ELK_VERSION: $ELK_VERSION
+        ELK_VERSION: 7.15.1
     volumes:
       - type: bind
         source: ./elasticsearch/config/elasticsearch.yml
@@ -27,7 +27,7 @@ services:
     build:
       context: logstash/
       args:
-        ELK_VERSION: $ELK_VERSION
+        ELK_VERSION: 7.15.1
     volumes:
       - type: bind
         source: ./logstash/config/logstash.yml
@@ -51,7 +51,7 @@ services:
     build:
       context: kibana/
       args:
-        ELK_VERSION: $ELK_VERSION
+        ELK_VERSION: 7.15.1
     volumes:
       - type: bind
         source: ./kibana/config/kibana.yml
